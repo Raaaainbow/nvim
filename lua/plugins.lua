@@ -50,7 +50,7 @@ return packer.startup(function(use)
     }
     use  {
         'nvim-treesitter/nvim-treesitter', 
-        run = ':TSUpdate' -- Automatically update Tree-sitter parsers
+        run = ':tsupdate' -- automatically update tree-sitter parsers
     }
     use'hrsh7th/nvim-cmp'
     use'hrsh7th/cmp-nvim-lsp'
@@ -58,27 +58,27 @@ return packer.startup(function(use)
 
     -- lsp-zero and its dependencies
     use {
-        'VonHeikemen/lsp-zero.nvim',
+        'vonheikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'}, -- Required
-            {'williamboman/mason.nvim'}, -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            -- lsp support
+            {'neovim/nvim-lspconfig'}, -- required
+            {'williamboman/mason.nvim'}, -- optional
+            {'williamboman/mason-lspconfig.nvim'}, -- optional
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'}, -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'hrsh7th/cmp-buffer'}, -- Optional
-            {'hrsh7th/cmp-path'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'}, -- Optional
+            -- autocompletion
+            {'hrsh7th/nvim-cmp'}, -- required
+            {'hrsh7th/cmp-nvim-lsp'}, -- required
+            {'hrsh7th/cmp-buffer'}, -- optional
+            {'hrsh7th/cmp-path'}, -- optional
+            {'hrsh7th/cmp-nvim-lua'}, -- optional
 
-            -- Snippets
-            {'L3MON4D3/LuaSnip'}, -- Required
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            -- snippets
+            {'l3mon4d3/luasnip'}, -- required
+            {'saadparwaiz1/cmp_luasnip'}, -- optional
         }
     }
-	if PACKER_BOOTSTRAP then
+	if packer_bootstrap then
 		require("packer").sync()
 	end
 end)
