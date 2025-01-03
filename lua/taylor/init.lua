@@ -1,0 +1,5 @@
+require('taylor.keymaps')
+require('taylor.gruvbox')
+require('taylor.telescope')
+require('taylor.treesitter')
+require('taylor.lsp-zero')
