@@ -43,18 +43,16 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'	
 	use 'ellisonleao/gruvbox.nvim'
     use 'm4xshen/autoclose.nvim'
-    use 'neovim/nvim-lspconfig'
    	use {
    	    'nvim-telescope/telescope.nvim', tag = '0.1.8',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use  {
         'nvim-treesitter/nvim-treesitter', 
-        run = ':tsupdate' -- automatically update tree-sitter parsers
+        run = ':TSUpdate' -- automatically update tree-sitter parsers
     }
     use'hrsh7th/nvim-cmp'
     use'hrsh7th/cmp-nvim-lsp'
-    use 'tpope/vim-fugitive'
 
     -- lsp-zero and its dependencies
     use {
@@ -76,6 +74,13 @@ return packer.startup(function(use)
             -- snippets
             {'l3mon4d3/luasnip'}, -- required
             {'saadparwaiz1/cmp_luasnip'}, -- optional
+        }
+    }
+    use 'lervag/vimtex'
+    use  {'NeogitOrg/Neogit',
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
         }
     }
 	if packer_bootstrap then

@@ -23,8 +23,6 @@ require('mason-lspconfig').setup({
   ensure_installed = {'ts_ls', 'rust_analyzer'},
   handlers = {
     function(server_name)
-        if server_name == 'jdtls' then
-            vim.env.JDTLS_JAVA_HOME = '/usr/lib/jvm/zulu-openjdk'
       require('lspconfig')[server_name].setup({
         capabilities = lsp_capabilities,
       })
