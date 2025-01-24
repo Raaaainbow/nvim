@@ -14,3 +14,4 @@ vim.opt.updatetime = 50 -- faster update time
 -- for start and end of line
 vim.keymap.set('n', '<leader>h', '^', {silent = true})
 vim.keymap.set('n', '<leader>l', '$', {silent = true})
+vim.keymap.set('n', '<leader>e', ':Explore<cr>', {silent = true})
