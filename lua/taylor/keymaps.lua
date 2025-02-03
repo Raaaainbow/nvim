@@ -2,15 +2,17 @@
 vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
+vim.opt.undofile = true -- long undo history
+vim.opt.updatetime = 50 -- faster update time
 -- for better tab spacing
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 -- sets universal clipboard
-vim.opt.clipboard = "unnamedplus"
-vim.opt.scrolloff = 8
-vim.opt.undofile = true -- long undo history
-vim.opt.updatetime = 50 -- faster update time
+vim.keymap.set('v', '<leader>y', '"+y', {silent = true})
+vim.keymap.set('v', '<leader>p', '"+p', {silent = true})
+vim.keymap.set('n', '<leader>p', '"+p', {silent = true})
 -- for start and end of line
 vim.keymap.set('n', '<leader>h', '^', {silent = true})
 vim.keymap.set('n', '<leader>l', '$', {silent = true})
