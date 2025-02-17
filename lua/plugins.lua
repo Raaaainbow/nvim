@@ -83,6 +83,12 @@ return packer.startup(function(use)
             "sindrets/diffview.nvim",
         }
     }
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+      },
+    }
 	if packer_bootstrap then
 		require("packer").sync()
 	end
