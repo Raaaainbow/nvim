@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/sebastiant/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/home/sebastiant/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    url = "https://github.com/feline-nvim/feline.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/sebastiant/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
