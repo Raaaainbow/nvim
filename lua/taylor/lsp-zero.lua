@@ -18,6 +18,22 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+local lsp = require('lsp-zero').preset({
+    name = 'minimal',
+    set_lsp_keymaps = true,
+    manage_nvim_cmp = true,
+    suggest_lsp_servers = false,
+})
+
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = false,
+    float = true,
+})
+--[[
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {'ts_ls', 'rust_analyzer'},
@@ -49,6 +65,7 @@ require('mason-lspconfig').setup({
     end,
   }
 })
+--]]
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
