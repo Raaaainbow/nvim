@@ -19,6 +19,7 @@ vim.keymap.set('n', '<leader>P', '"+P', {silent = true})
 -- General keymaps
 -- vim.keymap.set('n', '<leader>e', ':Explore<cr>', {silent = true})
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+-- Fra Victor
 vim.keymap.set('n', '<leader>lb', function()
   vim.cmd('echo "Ligma Ballz"')
 end)
