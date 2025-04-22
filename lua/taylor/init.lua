@@ -1,4 +1,3 @@
-vim.opt.shortmess:append 'I'
 require('taylor.keymaps')
 require('taylor.gruvbox')
 require('taylor.telescope')
@@ -8,4 +7,3 @@ require('taylor.lspconfig')
 require('taylor.vimtex')
 require('taylor.neogit')
 require('taylor.tree')
-require('taylor.feline')

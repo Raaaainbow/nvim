@@ -89,8 +89,4 @@ return packer.startup(function(use)
         'nvim-tree/nvim-web-devicons', -- optional
       },
     }
-    use 'feline-nvim/feline.nvim'
-	if packer_bootstrap then
-		require("packer").sync()
-	end
 end)
