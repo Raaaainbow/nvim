@@ -83,10 +83,7 @@ return packer.startup(function(use)
             "sindrets/diffview.nvim",
         }
     }
-    use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-      },
-    }
+    use 'sindrets/diffview.nvim' 
+    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'norcalli/nvim-colorizer.lua'
 end)
